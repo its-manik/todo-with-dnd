@@ -38,7 +38,13 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj}) => {
             
                     <div className = "form-group">
                         <label>Task Name</label>
-                        <input type="text" className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName"/>
+                        {/* <input type="text" className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName"/> */}
+                        <select className='form-control' onChange = {handleChange} name="taskName">
+                            <option value={`low`}>Low</option>
+                            <option value={`middle`}>Middle</option>
+                            <option value={`high`}>High</option>
+                            <option value={`complex`}>Complex</option>
+                        </select>
                     </div>
                     <div className = "form-group">
                         <label>Description</label>
