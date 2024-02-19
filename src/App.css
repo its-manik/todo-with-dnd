@@ -1,40 +1,38 @@
-.header{
+p {
+  margin: 0 !important;
+}
+
+.header {
   height: 200px;
-  width: 100%;
-  background-color : #E9EEF6;
+  width: 100vw;
+  background-color: #e9eef6;
   padding-top: 50px;
 }
 
-.card-container{
-  height: 300px;
-  width: 300px;
-  box-shadow: 0px 3px 50px #A5A5A5;
+.card-wrapper {
+  width: 570px;
+  min-height: 60px;
+  /* box-shadow: 0px 3px 50px #a5a5a5; */
+  background: #fff;
 }
 
-.card-wrapper{
-  width: 270px; 
-  height: 200px; 
-  box-shadow: 0px 3px 50px #A5A5A5;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-top{
+.card-top {
   width: 100%;
   height: 2%;
 }
 
-.task-holder{
+.task-holder {
   width: 100%;
   height: 98%;
-  padding: 10px 10px;
-  display : flex;
-  flex-direction: column;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   position: relative;
 }
 
-.card-header{
-  margin-top: 10px;
+.card-header {
   margin-bottom: 10px;
   max-width: 80px;
   height: 30px;
@@ -42,11 +40,71 @@
   text-align: center;
 }
 
-.task-container{
-  height: 600px;
-  width: 100%;
+.task-container {
+  height: calc(100vh - 200px);
+  width: 100vw;
+  padding: 40px 100px 0 100px;
+  background-color: #edf4ff;
+}
+.task-inner {
+  height: 100%;
+  width: 600px;
   display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: nowrap;
+  margin: auto;
+  background-color: #edf4ff !important;
+  overflow-y: scroll;
+
+}
+
+.task-inner::-webkit-scrollbar-track {
+  background: fff;
+}
+.task-inner::-webkit-scrollbar-thumb {
+  background: #cdcdcd;
+}
+.task-inner::-webkit-scrollbar-thumb:hover {
+    background: #bfbfbf;
+  }
+.task-inner::-webkit-scrollbar {
+  width: 5px;
+}
+
+.task-inner2 {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 10px;
   flex-wrap: wrap;
-  background-color: #F6F7F8;
-  padding : 40px 100px;
+  margin: auto;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+.cardd {
+  background: #fff;
+  width: 90%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  .task-inner {
+    height: 100%;
+    width: 100%;
+  }
+  .card-wrapper {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 3px 50px #a5a5a5;
+  }
+  .task-container {
+    padding: 40px 10px;
+  }
 }
